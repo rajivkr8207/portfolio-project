@@ -27,7 +27,8 @@ body {
 @mixin progressbar($width) {
   width: $width;
   height: 100%;
-  background-color: #626262;
+
+  background-color: #6e6e6e;
   transition: all 0.3s ease-in;
 }
 header {
@@ -198,13 +199,14 @@ header {
       width: 18rem;
       height: 20rem;
       border-radius: 5px;
-      background-color: rgb(0, 0, 0);
+      background-color: transparent;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       padding: 10px;
       border-left: 1px solid white;
       border-right: 1px solid white;
+      transition: all 0.3s ease-in;
       .toptext {
         .title {
           display: flex;
@@ -221,18 +223,17 @@ header {
       .progress {
         height: 70%;
         width: 100%;
-        background-color: transparent;
         border-radius: 20px;
-
+        overflow: hidden;
         .progress-percentage {
           height: 60%;
-          background-color: transparent;
+          backdrop-filter: blur(5px);
           @include flexcenter;
           transition: all 0.3s ease;
         }
-        .progress-percentage:hover {
-          background-color: #292929;
-        }
+        // .progress-percentage:hover {
+        //   background-color: #292929;
+        // }
 
         .progress-bar {
           height: 40%;
@@ -249,20 +250,29 @@ header {
           .progress-hover-85 {
             @include progressbar(85%);
           }
+          .progress-hover-30 {
+            @include progressbar(30%);
+          }
         }
       }
-      .progress:hover .progress-hover {
-        background-color: #f2652b;
-      }
-      .progress:hover .progress-hover-75 {
-        background-color: #f2652b;
-      }
-      .progress:hover .progress-hover-90 {
-        background-color: #f2652b;
-      }
-      .progress:hover .progress-hover-85 {
-        background-color: #f2652b;
-      }
+    }
+    .about-card:hover .progress .progress-percentage {
+      background-color: #2e2e2e69;
+    }
+    .about-card:hover .progress .progress-hover {
+      background-color: #f2652b;
+    }
+    .about-card:hover .progress .progress-hover-75 {
+      background-color: #f2652b;
+    }
+    .about-card:hover .progress .progress-hover-90 {
+      background-color: #f2652b;
+    }
+    .about-card:hover .progress .progress-hover-85 {
+      background-color: #f2652b;
+    }
+    .about-card:hover .progress .progress-hover-30 {
+      background-color: #f2652b;
     }
   }
 }
@@ -352,13 +362,13 @@ header {
 }
 
 #about-project {
-  height: 100vh;
+  height: 110vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   padding-left: 50px;
-
+  padding: 20px;
   .about-header {
     @include flexcenter();
     width: 27rem;
@@ -367,7 +377,7 @@ header {
     text-align: center;
     gap: 10px;
 
-    span{
+    span {
       font-size: 1.3rem;
     }
     h1 {
@@ -375,19 +385,112 @@ header {
     }
   }
 
+  .allplancard {
+    @include flexcenter();
+    gap: 3rem;
 
-  .allplancard{
-
-
-
-    .plan-card{
+    .plan-card {
       width: 25rem;
-      height: 30rem;
-      padding: 10px;
+      height: 40rem;
+      padding: 15px;
       display: flex;
       justify-content: space-between;
       flex-direction: column;
-      // background-color: red;
+      background-color: transparent;
+      border: 2px solid #3d3d3d;
+      border-radius: 20px;
+      transition: all 0.6s ease-in-out;
+      .plan-card-header {
+        border-bottom: 2px solid #626262;
+        .plan-top {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          i {
+            font-size: 2rem;
+            padding: 10px;
+            border: 2px solid #292929;
+            border-radius: 50px;
+            color: #f2652b;
+          }
+        }
+        .plain-pro {
+          @include flexcenter();
+          justify-content: start;
+                  font-family: "Poppins", sans-serif;
+
+          span {
+          font-size: 1.3rem;
+        }
+        .prolabel{
+          margin-left: 10px;
+          text-transform: uppercase;
+          font-size: 1rem;
+          font-weight: 600;
+          padding: 1px 12px;
+          border: none;
+          border-radius: 50px;
+          background: white;
+          color: black;
+        }
+      }
+      }
+
+      p {
+        font-size: 1rem;
+        font-family: "Poppins", sans-serif;
+      }
+
+      .plan-card-footer {
+        height: 25rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        div {
+          height: 90%;
+          padding: 15px;
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+          font-family: "Poppins", sans-serif;
+          background-color: #262626;
+
+          text-transform: capitalize;
+
+          h1 {
+            margin-bottom: 15px;
+          }
+
+          h3 {
+            @include flexcenter();
+            justify-content: start;
+            gap: 10px;
+          }
+        }
+        .start-btn {
+          background-color: #262626;
+          color: white;
+          border-radius: 10px;
+          margin-top: 5px;
+          padding: 18px;
+          border: none;
+          text-transform: capitalize;
+          font-size: 1.3rem;
+          transition: all 0.3s ease-in;
+          font-family: "Orbitron", sans-serif;
+        }
+      }
+    }
+    .plan-card:hover {
+      scale: 1.1;
+      background-color: #ffffff25;
+      backdrop-filter: blur(5px);
+    }
+    .plan-card:hover .start-btn {
+      background-color: #f2652b;
+      color: white;
     }
   }
 }

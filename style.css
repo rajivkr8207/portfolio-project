@@ -170,13 +170,14 @@ header nav .btn_contact button {
   width: 18rem;
   height: 20rem;
   border-radius: 5px;
-  background-color: rgb(0, 0, 0);
+  background-color: transparent;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 10px;
   border-left: 1px solid white;
   border-right: 1px solid white;
+  transition: all 0.3s ease-in;
 }
 #aboutme .allcard .about-card .toptext .title {
   display: flex;
@@ -191,19 +192,17 @@ header nav .btn_contact button {
 #aboutme .allcard .about-card .progress {
   height: 70%;
   width: 100%;
-  background-color: transparent;
   border-radius: 20px;
+  overflow: hidden;
 }
 #aboutme .allcard .about-card .progress .progress-percentage {
   height: 60%;
-  background-color: transparent;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
   display: flex;
   justify-content: center;
   align-items: center;
   transition: all 0.3s ease;
-}
-#aboutme .allcard .about-card .progress .progress-percentage:hover {
-  background-color: #292929;
 }
 #aboutme .allcard .about-card .progress .progress-bar {
   height: 40%;
@@ -212,37 +211,49 @@ header nav .btn_contact button {
 #aboutme .allcard .about-card .progress .progress-bar .progress-hover {
   width: 90%;
   height: 100%;
-  background-color: #626262;
+  background-color: #6e6e6e;
   transition: all 0.3s ease-in;
 }
 #aboutme .allcard .about-card .progress .progress-bar .progress-hover-75 {
   width: 75%;
   height: 100%;
-  background-color: #626262;
+  background-color: #6e6e6e;
   transition: all 0.3s ease-in;
 }
 #aboutme .allcard .about-card .progress .progress-bar .progress-hover-90 {
   width: 90%;
   height: 100%;
-  background-color: #626262;
+  background-color: #6e6e6e;
   transition: all 0.3s ease-in;
 }
 #aboutme .allcard .about-card .progress .progress-bar .progress-hover-85 {
   width: 85%;
   height: 100%;
-  background-color: #626262;
+  background-color: #6e6e6e;
   transition: all 0.3s ease-in;
 }
-#aboutme .allcard .about-card .progress:hover .progress-hover {
+#aboutme .allcard .about-card .progress .progress-bar .progress-hover-30 {
+  width: 30%;
+  height: 100%;
+  background-color: #6e6e6e;
+  transition: all 0.3s ease-in;
+}
+#aboutme .allcard .about-card:hover .progress .progress-percentage {
+  background-color: rgba(46, 46, 46, 0.4117647059);
+}
+#aboutme .allcard .about-card:hover .progress .progress-hover {
   background-color: #f2652b;
 }
-#aboutme .allcard .about-card .progress:hover .progress-hover-75 {
+#aboutme .allcard .about-card:hover .progress .progress-hover-75 {
   background-color: #f2652b;
 }
-#aboutme .allcard .about-card .progress:hover .progress-hover-90 {
+#aboutme .allcard .about-card:hover .progress .progress-hover-90 {
   background-color: #f2652b;
 }
-#aboutme .allcard .about-card .progress:hover .progress-hover-85 {
+#aboutme .allcard .about-card:hover .progress .progress-hover-85 {
+  background-color: #f2652b;
+}
+#aboutme .allcard .about-card:hover .progress .progress-hover-30 {
   background-color: #f2652b;
 }
 
@@ -329,12 +340,13 @@ header nav .btn_contact button {
 }
 
 #about-project {
-  height: 100vh;
+  height: 110vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   padding-left: 50px;
+  padding: 20px;
 }
 #about-project .about-header {
   display: flex;
@@ -352,11 +364,109 @@ header nav .btn_contact button {
 #about-project .about-header h1 {
   font-size: 3rem;
 }
+#about-project .allplancard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
 #about-project .allplancard .plan-card {
   width: 25rem;
-  height: 30rem;
-  padding: 10px;
+  height: 40rem;
+  padding: 15px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  background-color: transparent;
+  border: 2px solid #3d3d3d;
+  border-radius: 20px;
+  transition: all 0.6s ease-in-out;
+}
+#about-project .allplancard .plan-card .plan-card-header {
+  border-bottom: 2px solid #626262;
+}
+#about-project .allplancard .plan-card .plan-card-header .plan-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#about-project .allplancard .plan-card .plan-card-header .plan-top i {
+  font-size: 2rem;
+  padding: 10px;
+  border: 2px solid #292929;
+  border-radius: 50px;
+  color: #f2652b;
+}
+#about-project .allplancard .plan-card .plan-card-header .plain-pro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: start;
+  font-family: "Poppins", sans-serif;
+}
+#about-project .allplancard .plan-card .plan-card-header .plain-pro span {
+  font-size: 1.3rem;
+}
+#about-project .allplancard .plan-card .plan-card-header .plain-pro .prolabel {
+  margin-left: 10px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1px 12px;
+  border: none;
+  border-radius: 50px;
+  background: white;
+  color: black;
+}
+#about-project .allplancard .plan-card p {
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+#about-project .allplancard .plan-card .plan-card-footer {
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#about-project .allplancard .plan-card .plan-card-footer div {
+  height: 90%;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  background-color: #262626;
+  text-transform: capitalize;
+}
+#about-project .allplancard .plan-card .plan-card-footer div h1 {
+  margin-bottom: 15px;
+}
+#about-project .allplancard .plan-card .plan-card-footer div h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+}
+#about-project .allplancard .plan-card .plan-card-footer .start-btn {
+  background-color: #262626;
+  color: white;
+  border-radius: 10px;
+  margin-top: 5px;
+  padding: 18px;
+  border: none;
+  text-transform: capitalize;
+  font-size: 1.3rem;
+  transition: all 0.3s ease-in;
+  font-family: "Orbitron", sans-serif;
+}
+#about-project .allplancard .plan-card:hover {
+  scale: 1.1;
+  background-color: rgba(255, 255, 255, 0.1450980392);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+#about-project .allplancard .plan-card:hover .start-btn {
+  background-color: #f2652b;
+  color: white;
 }/*# sourceMappingURL=style.css.map */

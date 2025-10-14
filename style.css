@@ -1,0 +1,362 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Orbitron", sans-serif;
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+header {
+  background-color: black;
+  color: white;
+}
+header nav {
+  padding: 10px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav .logo {
+  font-size: 3rem;
+  text-transform: capitalize;
+  display: flex;
+  gap: 10px;
+  align-items: end;
+}
+header nav .logo div {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+header nav .center_menu i {
+  background-color: black;
+  padding: 5px;
+  border: 1px solid white;
+  border-radius: 50px;
+  font-size: 3rem;
+}
+header nav .btn_contact button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: rgb(51, 51, 51);
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+#herosec {
+  width: 100%;
+  height: 95vh;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: space-between;
+}
+#herosec .leftside {
+  width: 48%;
+  height: 90%;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#herosec .leftside .avail {
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+}
+#herosec .leftside .avail div {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+#herosec .leftside .center-name {
+  text-transform: capitalize;
+}
+#herosec .leftside .center-name h1 {
+  font-size: 13rem;
+  text-transform: uppercase;
+}
+#herosec .leftside .center-name p {
+  font-size: 1.3rem;
+  text-align: start;
+  padding-left: 50px;
+  word-spacing: 10px;
+}
+#herosec .rightside {
+  width: 48%;
+  height: 90%;
+  padding-bottom: 50px;
+  padding-right: 50px;
+  background-image: url(./profile2.png);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+}
+#herosec .rightside h1 {
+  font-size: 4rem;
+}
+#herosec .rightside p {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+#herosec .rightside .social-icon {
+  background-color: #262626;
+  position: absolute;
+  top: 45%;
+  padding: 15px 0 10px 10px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  right: 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+#aboutme {
+  width: 100%;
+  height: 90vh;
+  background-color: rgb(0, 0, 0);
+  padding: 50px 0;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+}
+#aboutme .abouttop {
+  width: 70%;
+}
+#aboutme .abouttop h3 {
+  font-size: 1.5rem;
+}
+#aboutme .abouttop p {
+  font-size: 4rem;
+}
+#aboutme .abouttop p span {
+  color: #6e6e6e;
+}
+#aboutme .allcard {
+  width: 100%;
+  margin: 0% auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#aboutme .allcard .about-card {
+  width: 18rem;
+  height: 20rem;
+  border-radius: 5px;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
+#aboutme .allcard .about-card .toptext .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#aboutme .allcard .about-card .toptext .desc {
+  text-transform: capitalize;
+  font-size: 0.8rem;
+  color: #a3948c;
+}
+#aboutme .allcard .about-card .progress {
+  height: 70%;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 20px;
+}
+#aboutme .allcard .about-card .progress .progress-percentage {
+  height: 60%;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+#aboutme .allcard .about-card .progress .progress-percentage:hover {
+  background-color: #292929;
+}
+#aboutme .allcard .about-card .progress .progress-bar {
+  height: 40%;
+  background-color: #3d3d3d;
+}
+#aboutme .allcard .about-card .progress .progress-bar .progress-hover {
+  width: 90%;
+  height: 100%;
+  background-color: #626262;
+  transition: all 0.3s ease-in;
+}
+#aboutme .allcard .about-card .progress .progress-bar .progress-hover-75 {
+  width: 75%;
+  height: 100%;
+  background-color: #626262;
+  transition: all 0.3s ease-in;
+}
+#aboutme .allcard .about-card .progress .progress-bar .progress-hover-90 {
+  width: 90%;
+  height: 100%;
+  background-color: #626262;
+  transition: all 0.3s ease-in;
+}
+#aboutme .allcard .about-card .progress .progress-bar .progress-hover-85 {
+  width: 85%;
+  height: 100%;
+  background-color: #626262;
+  transition: all 0.3s ease-in;
+}
+#aboutme .allcard .about-card .progress:hover .progress-hover {
+  background-color: #f2652b;
+}
+#aboutme .allcard .about-card .progress:hover .progress-hover-75 {
+  background-color: #f2652b;
+}
+#aboutme .allcard .about-card .progress:hover .progress-hover-90 {
+  background-color: #f2652b;
+}
+#aboutme .allcard .about-card .progress:hover .progress-hover-85 {
+  background-color: #f2652b;
+}
+
+#alltech {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#alltech .tech-name {
+  width: 48%;
+  height: 100%;
+}
+#alltech .tech-name h3 {
+  font-size: 1.5rem;
+}
+#alltech .tech-name div {
+  height: 90%;
+  padding: 25px 0;
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#alltech .tech-name div h3 {
+  color: #595959;
+  font-size: 3rem;
+}
+#alltech .tech-name div h3:nth-child(3) {
+  color: white;
+}
+#alltech .tech-detail {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#alltech .tech-detail .tech-card {
+  width: 90%;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+#alltech .tech-detail .tech-card h4 {
+  font-size: 1.3rem;
+  font-family: "Poppins", sans-serif;
+}
+#alltech .tech-detail .tech-card p {
+  font-family: "Poppins", sans-serif;
+}
+#alltech .tech-detail .tech-card img {
+  width: 25rem;
+  height: 12rem;
+}
+#alltech .tech-detail .tech-card .tech-btn {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+#alltech .tech-detail .tech-card .tech-btn button {
+  padding: 8px 12px;
+  font-size: 1.3rem;
+  text-transform: capitalize;
+  border-radius: 50px;
+  background-color: transparent;
+}
+#alltech .tech-detail .tech-card .tech-btn button:nth-child(1) {
+  color: white;
+  border: none;
+}
+#alltech .tech-detail .tech-card .tech-btn button:nth-child(2) {
+  color: #595959;
+  border: 2px solid #595959;
+}
+#alltech .tech-detail .tech-card .tech-btn button:nth-child(3) {
+  color: #f2652b;
+  border: 2px solid #f2652b;
+}
+#alltech .tech-detail .tech-card .tech-btn button:nth-child(4) {
+  color: #595959;
+  border: 2px solid #595959;
+}
+
+#about-project {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 50px;
+}
+#about-project .about-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 27rem;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: center;
+  gap: 10px;
+}
+#about-project .about-header span {
+  font-size: 1.3rem;
+}
+#about-project .about-header h1 {
+  font-size: 3rem;
+}
+#about-project .allplancard .plan-card {
+  width: 25rem;
+  height: 30rem;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}/*# sourceMappingURL=style.css.map */

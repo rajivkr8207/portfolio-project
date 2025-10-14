@@ -1,0 +1,393 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Orbitron", sans-serif;
+  background-color: rgb(0, 0, 0);
+
+  color: white;
+}
+
+@mixin flexcenter() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin paddingleft() {
+  padding-left: 50px;
+}
+
+@mixin progressbar($width) {
+  width: $width;
+  height: 100%;
+  background-color: #626262;
+  transition: all 0.3s ease-in;
+}
+header {
+  background-color: black;
+  color: white;
+  nav {
+    padding: 10px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+      font-size: 3rem;
+      text-transform: capitalize;
+      display: flex;
+      gap: 10px;
+      align-items: end;
+      div {
+        width: 10px;
+        height: 10px;
+        background-color: red;
+        border-radius: 2px;
+        margin-bottom: 10px;
+      }
+    }
+
+    .center_menu {
+      i {
+        background-color: black;
+        padding: 5px;
+        border: 1px solid white;
+        border-radius: 50px;
+        font-size: 3rem;
+      }
+    }
+
+    .btn_contact {
+      button {
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        background-color: rgb(51, 51, 51);
+        color: white;
+        border: none;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+#herosec {
+  width: 100%;
+  height: 95vh;
+  background-color: rgb(0, 0, 0);
+
+  display: flex;
+  justify-content: space-between;
+
+  .leftside {
+    width: 48%;
+    height: 90%;
+    @include paddingleft;
+    // padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .avail {
+      font-size: 1.3rem;
+      @include flexcenter();
+      justify-content: start;
+      gap: 10px;
+      div {
+        width: 10px;
+        height: 10px;
+        background-color: red;
+        border-radius: 2px;
+        margin-bottom: 10px;
+      }
+    }
+
+    .center-name {
+      text-transform: capitalize;
+      h1 {
+        font-size: 13rem;
+        text-transform: uppercase;
+      }
+      p {
+        font-size: 1.3rem;
+        text-align: start;
+        padding-left: 50px;
+        word-spacing: 10px;
+      }
+    }
+  }
+
+  .rightside {
+    width: 48%;
+    height: 90%;
+    padding-bottom: 50px;
+    padding-right: 50px;
+    background-image: url(./profile2.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+    h1 {
+      font-size: 4rem;
+    }
+    p {
+      font-size: 1.5rem;
+      text-transform: capitalize;
+    }
+    .social-icon {
+      background-color: #262626;
+      position: absolute;
+      top: 45%;
+      padding: 15px 0 10px 10px;
+      border-top: 1px solid white;
+      border-bottom: 1px solid white;
+      border-top-left-radius: 50px;
+      border-bottom-left-radius: 50px;
+      right: 0%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+#aboutme {
+  width: 100%;
+  height: 90vh;
+  background-color: rgb(0, 0, 0);
+  padding: 50px 0;
+  @include paddingleft;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+
+  .abouttop {
+    width: 70%;
+    h3 {
+      font-size: 1.5rem;
+    }
+    p {
+      font-size: 4rem;
+      span {
+        color: #6e6e6e;
+      }
+    }
+  }
+
+  .allcard {
+    width: 100%;
+    // background-color: red;
+    margin: 0% auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .about-card {
+      width: 18rem;
+      height: 20rem;
+      border-radius: 5px;
+      background-color: rgb(0, 0, 0);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 10px;
+      border-left: 1px solid white;
+      border-right: 1px solid white;
+      .toptext {
+        .title {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        .desc {
+          text-transform: capitalize;
+          font-size: 0.8rem;
+          color: #a3948c;
+        }
+      }
+
+      .progress {
+        height: 70%;
+        width: 100%;
+        background-color: transparent;
+        border-radius: 20px;
+
+        .progress-percentage {
+          height: 60%;
+          background-color: transparent;
+          @include flexcenter;
+          transition: all 0.3s ease;
+        }
+        .progress-percentage:hover {
+          background-color: #292929;
+        }
+
+        .progress-bar {
+          height: 40%;
+          background-color: #3d3d3d;
+          .progress-hover {
+            @include progressbar(90%);
+          }
+          .progress-hover-75 {
+            @include progressbar(75%);
+          }
+          .progress-hover-90 {
+            @include progressbar(90%);
+          }
+          .progress-hover-85 {
+            @include progressbar(85%);
+          }
+        }
+      }
+      .progress:hover .progress-hover {
+        background-color: #f2652b;
+      }
+      .progress:hover .progress-hover-75 {
+        background-color: #f2652b;
+      }
+      .progress:hover .progress-hover-90 {
+        background-color: #f2652b;
+      }
+      .progress:hover .progress-hover-85 {
+        background-color: #f2652b;
+      }
+    }
+  }
+}
+
+#alltech {
+  width: 100%;
+  height: 100vh;
+  @include flexcenter();
+
+  .tech-name {
+    width: 48%;
+    height: 100%;
+    h3 {
+      font-size: 1.5rem;
+    }
+    div {
+      height: 90%;
+      padding: 25px 0;
+      text-transform: capitalize;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      h3 {
+        color: #595959;
+        font-size: 3rem;
+      }
+      h3:nth-child(3) {
+        color: white;
+      }
+    }
+  }
+  .tech-detail {
+    width: 30%;
+    height: 100%;
+    @include flexcenter();
+
+    .tech-card {
+      width: 90%;
+      display: flex;
+      gap: 20px;
+      flex-direction: column;
+      h4 {
+        font-size: 1.3rem;
+        font-family: "Poppins", sans-serif;
+      }
+      p {
+        font-family: "Poppins", sans-serif;
+      }
+      img {
+        width: 25rem;
+        height: 12rem;
+      }
+
+      .tech-btn {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+
+        button {
+          padding: 8px 12px;
+          font-size: 1.3rem;
+          text-transform: capitalize;
+          border-radius: 50px;
+          background-color: transparent;
+        }
+        button:nth-child(1) {
+          color: white;
+          border: none;
+        }
+        button:nth-child(2) {
+          color: #595959;
+          border: 2px solid #595959;
+        }
+        button:nth-child(3) {
+          color: #f2652b;
+          border: 2px solid #f2652b;
+        }
+
+        button:nth-child(4) {
+          color: #595959;
+
+          border: 2px solid #595959;
+        }
+      }
+    }
+  }
+}
+
+#about-project {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 50px;
+
+  .about-header {
+    @include flexcenter();
+    width: 27rem;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+    gap: 10px;
+
+    span{
+      font-size: 1.3rem;
+    }
+    h1 {
+      font-size: 3rem;
+    }
+  }
+
+
+  .allplancard{
+
+
+
+    .plan-card{
+      width: 25rem;
+      height: 30rem;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      // background-color: red;
+    }
+  }
+}

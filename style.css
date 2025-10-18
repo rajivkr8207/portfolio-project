@@ -10,8 +10,9 @@ body {
   width: 100%;
   height: 100%;
   font-family: "Orbitron", sans-serif;
-  background-color: rgb(0, 0, 0);
+  background-color: #111111;
   color: white;
+  overflow-x: hidden;
 }
 
 header {
@@ -56,8 +57,8 @@ header nav .btn_contact button {
 
 #herosec {
   width: 100%;
-  height: 95vh;
-  background-color: rgb(0, 0, 0);
+  height: 90vh;
+  background-color: rgba(17, 17, 17, 0.0666666667);
   display: flex;
   justify-content: space-between;
 }
@@ -99,7 +100,7 @@ header nav .btn_contact button {
 }
 #herosec .rightside {
   width: 48%;
-  height: 90%;
+  height: 100%;
   padding-bottom: 50px;
   padding-right: 50px;
   background-image: url(./profile2.png);
@@ -469,4 +470,150 @@ header nav .btn_contact button {
 #about-project .allplancard .plan-card:hover .start-btn {
   background-color: #f2652b;
   color: white;
+}
+
+#testimonial {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#testimonial .about-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 27rem;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: center;
+  gap: 10px;
+}
+#testimonial .about-header span {
+  font-size: 1.3rem;
+}
+#testimonial .about-header h1 {
+  font-size: 3rem;
+}
+#testimonial .row-testimonial-box {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 1rem;
+}
+#testimonial .row-testimonial-box .testimonial-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+#testimonial .row-testimonial-box .testimonial-box .testimonial-card {
+  width: 35rem;
+  height: 20rem;
+  background-color: rgba(36, 36, 36, 0.342);
+  border: 2px solid rgba(255, 255, 255, 0.26);
+  border-radius: 20px;
+  padding: 20px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+#testimonial .row-testimonial-box .testimonial-box .testimonial-card .test-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+#testimonial .row-testimonial-box .testimonial-box .testimonial-card .test-card-header .textleft-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+#testimonial .row-testimonial-box .testimonial-box .testimonial-card .test-card-header .textleft-card img {
+  width: 4rem;
+  height: 4rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#testimonial .row-testimonial-box .testimonial-box .testimonial-card .test-card-header .textleft-card .testi-name p {
+  color: #6e6e6e;
+  text-transform: capitalize;
+}
+#testimonial .row-testimonial-box .testimonial-box .testimonial-card .test-card-header .testi-logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+#testimonial .row-testimonial-box .testimonial-box .testimonial-card .testi-para {
+  height: 12rem;
+  border-radius: 20px;
+  background-color: #292929;
+  padding: 10px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  line-height: 1.4;
+  word-spacing: 0.3rem;
+  font-size: 1.2rem;
+}
+#testimonial .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.15) 20%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.15) 80%, rgba(0, 0, 0, 0.9) 100%);
+}
+
+#client {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  padding: 1rem 0;
+}
+#client .about-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 27rem;
+  flex-direction: column;
+  margin: 0 auto;
+  gap: 10px;
+}
+#client .about-header span {
+  font-size: 1.3rem;
+}
+#client .about-header h1 {
+  font-size: 3rem;
+}
+#client .client-data {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 6rem 0rem;
+  text-align: center;
+  gap: 2rem;
+}
+#client .client-data div h1 {
+  font-size: 3rem;
+}
+#client .client-data div small {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#poster {
+  width: 100%;
+  margin: 3rem auto;
+  padding: 1rem;
+  background-color: white;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+}
+#poster .marq div {
+  display: flex;
+  justify-content: space-around;
+  font-weight: 600;
 }/*# sourceMappingURL=style.css.map */
